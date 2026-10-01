@@ -1,0 +1,113 @@
+/*
+  NEEZA — FOOTER STYLES
+  ---------------------------------------------------
+  Same footer markup is reused on every page; this file
+  is the only place its styling is defined.
+*/
+
+/* ================= FOOTER ================= */
+.footer-neeza {
+  background-color: var(--neeza-offwhite);
+  border-top: var(--border-hairline);
+  padding: var(--section-space-sm) 0 24px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(3, 1fr);
+  gap: 32px;
+  padding-bottom: 40px;
+}
+
+.footer-brand .navbar-logo {
+  margin-bottom: 14px;
+}
+
+.footer-brand p {
+  font-size: 0.9rem;
+  max-width: 280px;
+}
+
+.footer-col h4 {
+  font-size: 0.85rem;
+  margin-bottom: 18px;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+  font-size: 0.9rem;
+  color: var(--neeza-grey-dark);
+}
+
+.footer-col ul li a:hover {
+  color: var(--neeza-black);
+}
+
+.footer-social {
+  display: flex;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.footer-social a {
+  width: 34px;
+  height: 34px;
+  border: var(--border-hairline);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: var(--neeza-black);
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  background-color: var(--neeza-black);
+  color: var(--neeza-white);
+  border-color: var(--neeza-black);
+  transform: translateY(-4px);
+}
+
+.footer-bottom {
+  border-top: var(--border-hairline);
+  padding-top: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--neeza-grey-dark);
+}
+
+/* ================= SOCIAL ICON COLORS ================= */
+
+.footer-social a:nth-child(1) {
+  color: #E1306C;
+}
+
+.footer-social a:nth-child(2) {
+  color: #25D366;
+}
+
+.footer-social a:nth-child(3) {
+  color: #0e0303;
+}
+
+.footer-social a:hover {
+  background-color: var(--neeza-black);
+  border-color: var(--neeza-black);
+}
+
+.footer-social a:nth-child(1):hover {
+  color: #E1306C;
+}
+
+.footer-social a:nth-child(2):hover {
+  color: #25D366;
+}
+
+.footer-social a:nth-child(3):hover {
+  color: #000000;
+}

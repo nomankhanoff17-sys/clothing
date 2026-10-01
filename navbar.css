@@ -1,0 +1,225 @@
+/*
+  NEEZA — NAVBAR STYLES
+  ---------------------------------------------------
+  Covers the announcement bar and the main navigation
+  only. Mobile-specific overrides live in responsive.css.
+*/
+
+/* ================= ANNOUNCEMENT BAR ================= */
+.announcement-bar {
+  background-color: var(--neeza-black);
+  color: var(--neeza-white);
+  text-align: center;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  padding: 9px 16px;
+}
+
+/* ================= NAVBAR ================= */
+.navbar-neeza {
+  background-color: var(--neeza-white);
+  border-bottom: var(--border-hairline);
+  padding: 18px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-neeza.is-scrolled {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* brand */
+.navbar-logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* center links */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navbar-links a {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--neeza-black);
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.navbar-links a.active,
+.navbar-links a:hover {
+  border-bottom: 1px solid var(--neeza-black);
+}
+
+/* right icons */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-actions a,
+.navbar-actions button {
+  background: none;
+  border: none;
+  font-size: 1.05rem;
+  color: var(--neeza-black);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.navbar-icon-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: var(--neeza-black);
+  color: var(--neeza-white);
+  font-size: 0.65rem;
+  font-weight: 600;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* mobile menu toggle (hidden on desktop) */
+.navbar-toggle {
+  display: none;
+  border: none;
+  background: none;
+  font-size: 1.3rem;
+}
+
+/* mobile dropdown menu */
+.navbar-mobile-menu {
+  display: none;
+  flex-direction: column;
+  border-top: var(--border-hairline);
+  margin-top: 18px;
+  padding-top: 18px;
+}
+
+.navbar-mobile-menu a {
+  padding: 12px 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-bottom: var(--border-hairline);
+}
+
+.navbar-mobile-menu.is-open {
+  display: flex;
+}
+
+
+/* ================= SEARCH BAR ================= */
+
+/* ================= SEARCH BAR ================= */
+
+.navbar-search-bar {
+  width: 100%;
+  background-color: var(--neeza-white);
+  border-bottom: var(--border-hairline);
+
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    max-height 0.3s ease,
+    opacity 0.2s ease,
+    visibility 0.3s ease;
+}
+
+.navbar-search-bar.is-open {
+  max-height: 100px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar-search-form {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 14px 0;
+
+  display: flex;
+  align-items: center;
+
+  border: none;
+  background-color: var(--neeza-white);
+}
+
+.navbar-search-form input {
+  flex: 1;
+
+  border: 1px solid var(--neeza-grey-mid);
+  border-right: none;
+
+  outline: none;
+
+  padding: 12px 16px;
+
+  font-family: inherit;
+  font-size: 0.9rem;
+
+  background-color: var(--neeza-white);
+}
+
+.navbar-search-form input:focus {
+  border-color: var(--neeza-black);
+}
+
+.navbar-search-form button {
+  width: 48px;
+  height: 43px;
+
+  border: 1px solid var(--neeza-black);
+
+  background-color: var(--neeza-black);
+  color: var(--neeza-white);
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.2s ease;
+}
+
+.navbar-search-form button:hover {
+  background-color: var(--neeza-white);
+  color: var(--neeza-black);
+}
+
+
+/* ================= MOBILE SEARCH ================= */
+
+@media (max-width: 768px) {
+
+  .navbar-search-form {
+    width: 100%;
+    padding: 12px 16px;
+  }
+
+  .navbar-search-bar.is-open {
+    max-height: 100px;
+  }
+
+}

@@ -1,0 +1,1068 @@
+/*
+  NEEZA — GLOBAL STYLES
+  ---------------------------------------------------
+  This file holds design tokens (colors, type, spacing)
+  and base styles shared across every page: resets,
+  typography, buttons, containers, and small utility
+  classes. Page-specific layout lives in its own file
+  (shop.css, cart.css, etc.) — do not add page-specific
+  rules here.
+*/
+
+/* ================= FONTS ================= */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+/* ================= DESIGN TOKENS ================= */
+:root {
+  /* colors */
+  --neeza-black: #111111;
+  --neeza-white: #ffffff;
+  --neeza-offwhite: #f6f5f2;
+  --neeza-grey-light: #e4e1db;
+  --neeza-grey-mid: #b9b5ac;
+  --neeza-grey-dark: #59564f;
+  --neeza-sale: #a13d3d;
+
+  /* type */
+  --font-heading: 'Archivo', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* spacing */
+  --section-space: 96px;
+  --section-space-sm: 56px;
+
+  /* borders */
+  --border-hairline: 1px solid var(--neeza-grey-light);
+}
+
+/* ================= RESET ================= */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--neeza-black);
+  background-color: var(--neeza-white);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* ================= TYPOGRAPHY ================= */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: 2.75rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.4rem; }
+h4 { font-size: 1.1rem; }
+
+p {
+  margin: 0;
+  color: var(--neeza-grey-dark);
+}
+
+.section-label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  color: var(--neeza-grey-dark);
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* ================= LAYOUT ================= */
+.container-neeza {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: var(--section-space) 0;
+}
+
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 16px;
+}
+
+.section-header .view-all {
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-bottom: 1px solid var(--neeza-black);
+  padding-bottom: 2px;
+  white-space: nowrap;
+}
+
+/* ================= BUTTONS ================= */
+.btn-neeza {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 0;
+  border: 1px solid var(--neeza-black);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-neeza-primary {
+  background-color: var(--neeza-black);
+  color: var(--neeza-white);
+}
+
+.btn-neeza-primary:hover {
+  background-color: var(--neeza-white);
+  color: var(--neeza-black);
+}
+
+.btn-neeza-outline {
+  background-color: transparent;
+  color: var(--neeza-black);
+}
+
+.btn-neeza-outline:hover {
+  background-color: var(--neeza-black);
+  color: var(--neeza-white);
+}
+
+.btn-neeza-block {
+  width: 100%;
+}
+
+/* ================= FORM FIELDS ================= */
+.field-group {
+  margin-bottom: 20px;
+}
+
+.field-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.field-group input,
+.field-group select,
+.field-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--neeza-grey-light);
+  background-color: var(--neeza-white);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+}
+
+.field-group input:focus,
+.field-group select:focus,
+.field-group textarea:focus {
+  outline: 2px solid var(--neeza-black);
+  outline-offset: 1px;
+}
+
+/* ================= BADGES ================= */
+.badge-neeza {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  background-color: var(--neeza-black);
+  color: var(--neeza-white);
+}
+
+.badge-neeza.badge-sale {
+  background-color: var(--neeza-sale);
+}
+
+/* ================= HERO BANNER ================= */
+
+.hero {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative;
+}
+
+.hero-banner {
+    position: relative;
+    width: 100vw !important;
+    height: 620px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-banner img {
+    display: block;
+    width: 100% !important;
+    max-width: none !important;
+    height: 620px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-overlay {
+    position: absolute !important;
+    top: 50% !important;
+    left: 8% !important;
+    transform: translateY(-50%) !important;
+
+    width: 430px;
+    max-width: 430px;
+
+    z-index: 20;
+}
+
+.hero-overlay .section-label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.hero-overlay h1 {
+    font-size: 64px;
+    line-height: 1.05;
+    margin: 0 0 20px;
+}
+
+.hero-overlay p {
+    max-width: 390px;
+    margin: 0 0 30px;
+    line-height: 1.7;
+}
+
+
+/* ================= MOBILE HERO ================= */
+
+@media (max-width: 768px) {
+
+    .hero,
+    .hero-banner {
+        width: 100vw !important;
+        max-width: 100vw !important;
+    }
+
+    .hero-banner {
+        height: 550px;
+    }
+
+    .hero-banner img {
+        height: 550px;
+    }
+
+    .hero-overlay {
+        left: 25px !important;
+        right: 25px;
+        width: auto;
+        max-width: none;
+    }
+
+    .hero-overlay h1 {
+        font-size: 42px;
+    }
+
+    .hero-overlay p {
+        font-size: 14px;
+    }
+}
+
+/* ================= SHOP BY CATEGORY ================= */
+/* ================= SHOP BY CATEGORY ================= */
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.category-card {
+    position: relative;
+    display: block;
+    overflow: visible;
+    color: var(--neeza-black);
+     background: var(--neeza-black);
+
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+/* Card hover */
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
+}
+
+/* Image */
+.category-card img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
+
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+/* Image zoom */
+.category-card:hover img {
+    transform: scale(1.07);
+    filter: brightness(0.82);
+}
+
+/* Category name */
+.category-name {
+    display: block;
+    margin-top: 14px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--neeza-white);
+    text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .category-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .category-card:hover {
+        transform: translateY(-5px);
+    }
+}
+
+/* ================= PRODUCT GRID (section wrapper) ================= */
+.section-alt {
+  background-color: var(--neeza-offwhite);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+
+
+/* ================= NEW ARRIVAL PRODUCTS ================= */
+
+.product-card {
+    display: block;
+    color: var(--neeza-black);
+    text-decoration: none;
+}
+
+.product-image {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background-color: var(--neeza-offwhite);
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.04);
+}
+
+.product-info {
+    padding-top: 14px;
+}
+
+.product-info h3 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 5px;
+}
+
+.product-info p {
+    font-size: 0.9rem;
+    color: var(--neeza-grey-dark);
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+}
+
+
+
+/* ================= PROMO SECTION ================= */
+/* ================= PROMO SECTION ================= */
+
+.promo-section {
+    padding: 96px 0;
+}
+
+.promo-inner {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+/* PROMO IMAGE */
+
+.promo-inner img {
+    width: 55%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+
+    transition: all 0.5s ease;
+}
+
+/* IMAGE HOVER */
+
+.promo-inner img:hover {
+    transform: scale(1.04);
+    filter: brightness(0.88);
+}
+
+/* PROMO TEXT */
+
+.promo-content {
+    width: 45%;
+    max-width: 430px;
+}
+
+.promo-content .section-label {
+    margin-bottom: 12px;
+}
+
+.promo-content h2 {
+    font-size: 42px;
+    line-height: 1.1;
+    margin: 0 0 18px;
+}
+
+.promo-content p {
+    margin-bottom: 28px;
+    line-height: 1.7;
+}
+
+
+/* ================= PROMO MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .promo-inner {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .promo-inner img {
+        width: 100%;
+        height: 400px;
+    }
+
+    .promo-content {
+        width: 100%;
+        max-width: none;
+    }
+
+    .promo-content h2 {
+        font-size: 34px;
+    }
+}
+/* ================= PROMO MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .promo-inner {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .promo-inner img {
+        width: 100%;
+        height: 400px;
+    }
+
+    .promo-content {
+        width: 100%;
+        max-width: none;
+    }
+
+    .promo-content h2 {
+        font-size: 34px;
+    }
+}
+
+/* ================= WHY NEEZA ================= */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.why-item {
+  text-align: left;
+}
+
+.why-item i {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.why-item h4 {
+  margin-bottom: 8px;
+}
+
+.why-item p {
+  font-size: 0.9rem;
+}
+
+/* ================= NEWSLETTER ================= */
+.newsletter {
+  background-color: var(--neeza-black);
+  color: var(--neeza-white);
+  padding: var(--section-space-sm) 0;
+  text-align: center;
+}
+
+.newsletter h2 {
+  color: var(--neeza-white);
+  margin-bottom: 12px;
+}
+
+.newsletter p {
+  color: var(--neeza-grey-mid);
+  margin-bottom: 28px;
+}
+
+.newsletter-form {
+  display: flex;
+  max-width: 420px;
+  margin: 0 auto;
+  border: 1px solid var(--neeza-grey-dark);
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 14px 16px;
+  border: none;
+  background-color: transparent;
+  color: var(--neeza-white);
+  font-family: var(--font-body);
+}
+
+.newsletter-form input::placeholder {
+  color: var(--neeza-grey-mid);
+}
+
+.newsletter-form input:focus {
+  outline: none;
+}
+
+.newsletter-form button {
+  padding: 14px 24px;
+  border: none;
+  background-color: var(--neeza-white);
+  color: var(--neeza-black);
+  font-weight: 600;
+}
+
+.newsletter-note {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: var(--neeza-grey-mid);
+}
+
+
+/* ================= WHY NEEZA ANIMATION ================= */
+
+/* ================= WHY NEEZA HOVER ================= */
+
+.why-item {
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.why-item:hover {
+    transform: translateY(-8px);
+}
+
+.why-item i {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+    display: block;
+    color: #777777;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Karachi Delivery */
+.why-item:nth-child(1):hover i {
+    color: #e53935 !important;
+    transform: scale(1.15);
+}
+
+/* Customer Support */
+.why-item:nth-child(2):hover i {
+    color: #2196f3 !important;
+    transform: scale(1.15);
+}
+
+/* Quality You Can Feel */
+.why-item:nth-child(3):hover i {
+    color: #111111 !important;
+    transform: scale(1.15);
+}
+
+/* Honest Pricing */
+.why-item:nth-child(4):hover i {
+    color: #2e7d32 !important;
+    transform: scale(1.15);
+}
+
+
+/* ================= FOOTER SOCIAL ICONS ================= */
+
+.footer-social {
+    display: flex;
+    gap: 18px;
+    margin-top: 22px;
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    color: #777777;
+    background: transparent !important;
+    text-decoration: none;
+
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover - only icon color changes */
+
+.footer-social a:hover {
+    background: transparent !important;
+    transform: translateY(-3px);
+}
+
+/* Instagram */
+.footer-social .social-instagram:hover {
+    color: #E4405F;
+}
+
+/* WhatsApp */
+.footer-social .social-whatsapp:hover {
+    color: #25D366;
+}
+
+/* TikTok */
+.footer-social .social-tiktok:hover {
+    color: #000000;
+}
+
+/* ================= PRODUCT OPTIONS ================= */
+
+.size-option,
+.color-option {
+    border: 1px solid #d6d6d6;
+    background: #ffffff;
+    color: #111111;
+    padding: 9px 18px;
+    min-width: 48px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.size-option:hover,
+.color-option:hover {
+    border-color: #111111;
+    background: #f7f7f7;
+}
+
+.size-option.selected,
+.color-option.selected {
+    background: #111111;
+    color: #ffffff;
+    border-color: #111111;
+}
+
+.color-option {
+    min-width: auto;
+    padding: 9px 20px;
+}
+
+/* =====================================================
+   NEEZA — FINAL RESPONSIVE FIX
+===================================================== */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .container-neeza {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* ---------- NAVBAR ---------- */
+
+    .navbar-links {
+        display: none !important;
+    }
+
+    .navbar-actions {
+        margin-left: auto;
+        gap: 14px;
+    }
+
+    .navbar-toggle {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .hero-banner {
+        position: relative !important;
+        width: 100% !important;
+        height: 520px !important;
+        overflow: hidden !important;
+    }
+
+    .hero-banner > img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
+    }
+
+    .hero-overlay {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+
+        padding: 30px 20px !important;
+        transform: none !important;
+    }
+
+    .hero-overlay h1 {
+        font-size: 40px !important;
+        line-height: 1.05 !important;
+        max-width: 240px;
+        margin-bottom: 18px !important;
+    }
+
+    .hero-overlay p {
+        font-size: 14px !important;
+        max-width: 280px;
+        margin-bottom: 24px !important;
+    }
+
+    /* ---------- CATEGORY ---------- */
+
+    .category-grid {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .category-card {
+        width: 100%;
+    }
+
+    .category-card img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+    }
+
+    /* ---------- PRODUCTS ---------- */
+
+    .product-grid {
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .product-card {
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .product-image {
+        width: 100%;
+    }
+
+    /* ---------- PROMO ---------- */
+
+    .promo-section {
+        width: 100%;
+        padding: 60px 0;
+        overflow: hidden;
+    }
+
+    .promo-inner {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .promo-inner img {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    .promo-content {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .promo-content h2 {
+        font-size: 34px;
+    }
+
+    /* ---------- WHY NEEZA ---------- */
+
+    .why-grid {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* ---------- NEWSLETTER ---------- */
+
+    .newsletter {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .newsletter-form {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+    }
+
+    .newsletter-form input {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .newsletter-form button {
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+
+    /* ---------- FOOTER ---------- */
+
+    .footer-neeza {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .footer-grid {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px 18px;
+    }
+
+    .footer-brand,
+    .footer-col {
+        min-width: 0;
+    }
+
+    .footer-brand p,
+    .footer-col a {
+        overflow-wrap: break-word;
+    }
+
+    .footer-social {
+        display: flex !important;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+
+    .container-neeza {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .hero-banner {
+        height: 500px !important;
+    }
+
+    .hero-overlay {
+        padding: 25px 18px !important;
+    }
+
+    .hero-overlay h1 {
+        font-size: 34px !important;
+    }
+
+    .hero-overlay p {
+        font-size: 13px !important;
+    }
+
+    .product-grid {
+        gap: 14px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 14px;
+    }
+}
+
+/* ================= FINAL HERO + FOOTER FIX ================= */
+
+/* HERO IMAGE */
+.hero-banner > img {
+    object-position: right center !important;
+}
+
+/* ================= FOOTER MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .footer-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        align-items: start !important;
+        gap: 35px 25px !important;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1 !important;
+    }
+
+    .footer-col {
+        width: 100% !important;
+        display: block !important;
+    }
+
+    .footer-col ul {
+        display: block !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .footer-col li {
+        display: block !important;
+        margin-bottom: 10px !important;
+    }
+
+    .footer-social {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 12px !important;
+        width: 100% !important;
+    }
+
+    .footer-social a {
+        flex-shrink: 0 !important;
+    }
+}

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEEZA — Everyday Essentials for Men</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+  <!-- NEEZA styles -->
+  <link href="style.css" rel="stylesheet">
+  <link href="navbar.css" rel="stylesheet">
+  <link href="footer.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ================= ANNOUNCEMENT BAR ================= -->
+  <div class="announcement-bar">
+    Free shipping on orders over Rs. 5,000
+  </div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar-neeza">
+    <div class="container-neeza">
+      <div class="navbar-inner">
+        <a href="index.html" class="navbar-logo">NEEZA</a>
+
+        <nav class="navbar-links d-none d-lg-flex">
+          <a href="index.html" class="active">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="tshirts.html">T-Shirts</a>
+          <a href="shirts.html">Shirts</a>
+          <a href="trousers.html">Trousers</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="navbar-actions">
+          <button type="button" id="navbarSearchButton"aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <a href="wishlist.html" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></a>
+          <a href="cart.html" aria-label="Cart">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="navbar-icon-count">0</span>
+          </a>
+          <button type="button" class="navbar-toggle d-lg-none" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+      </div>
+
+      <!-- mobile menu -->
+      <nav class="navbar-mobile-menu d-lg-none">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="tshirts.html">T-Shirts</a>
+        <a href="shirts.html">Shirts</a>
+        <a href="trousers.html">Trousers</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <!-- SEARCH BAR -->
+<div class="navbar-search-bar">
+
+  <div class="container-neeza">
+
+    <form class="navbar-search-form">
+
+      <input
+        type="text"
+        id="navbarSearchInput"
+        placeholder="Search products..."
+        autocomplete="off"
+      >
+
+      <button type="submit" title="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+    </div>
+  </header>
+
+  <!-- ================= HERO BANNER ================= -->
+<!-- ================= HERO BANNER ================= -->
+<section class="hero">
+    <div class="hero-banner">
+
+        <img src="images/banners/hero-banner.jpg" 
+             alt="NEEZA New Season Collection">
+
+        <div class="hero-overlay">
+            <span class="section-label">NEW SEASON</span>
+
+            <h1>Everyday<br>Essentials</h1>
+
+            <p>
+                Clean, wearable staples built for daily life —
+                from t-shirts to tailored trousers.
+            </p>
+
+            <a href="shop.html" class="btn-neeza btn-neeza-primary">
+                Shop Now
+            </a>
+        </div>
+
+    </div>
+</section>
+
+  <!-- ================= SHOP BY CATEGORY ================= -->
+  <section class="section">
+    <div class="container-neeza">
+      <div class="section-header">
+        <h2>Shop By Category</h2>
+      </div>
+
+      <div class="category-grid">
+        <a href="tshirts.html" class="category-card">
+          <img src="images/categories/tshirts.jpg" alt="T-Shirts">
+          <span class="category-name">T-Shirts</span>
+        </a>
+        <a href="shirts.html" class="category-card">
+          <img src="images/categories/shirts.jpg" alt="Shirts">
+          <span class="category-name">Shirts</span>
+        </a>
+        <a href="trousers.html" class="category-card">
+          <img src="images/categories/trousers.jpg" alt="Trousers">
+          <span class="category-name">Trousers</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NEW ARRIVALS ================= -->
+  <section class="section section-alt">
+    <div class="container-neeza">
+      <div class="section-header">
+        <h2>New Arrivals</h2>
+        <a href="shop.html" class="view-all">View All</a>
+      </div>
+
+      <div class="product-grid" id="new-arrivals-grid">
+        <!-- populated later by product-rendering JS using PRODUCTS from products.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROMO SECTION ================= -->
+  <section class="promo-section">
+    <div class="container-neeza promo-inner">
+        <img src="images/banners/promo-banner.jpg" alt="NEEZA promotional collection">
+
+        <div class="promo-content">
+         <span class="section-label">NEW COLLECTION</span>
+         <h2>Upgrade Your Everyday Style</h2>
+         <p>
+         Discover clean, modern shirts designed for everyday wear.
+         </p>
+            <a href="shirts.html" class="btn-neeza btn-neeza-outline">Shop Shirts</a>
+        </div>
+    </div>
+</section>
+
+  <!-- ================= WHY NEEZA ================= -->
+  <section class="section">
+    <div class="container-neeza">
+
+        <div class="section-header">
+            <h2>Why NEEZA</h2>
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <h4>Karachi Delivery</h4>
+                <p>Reliable delivery available across Karachi with your order kept updated.</p>
+            </div>
+
+            <div class="why-item">
+                <i class="fa-solid fa-headset"></i>
+                <h4>Customer Support</h4>
+                <p>Need help with your order? Our support team is here to assist you.</p>
+            </div>
+
+            <div class="why-item">
+                <i class="fa-solid fa-shirt"></i>
+                <h4>Quality You Can Feel</h4>
+                <p>We focus on comfortable fabrics and clean finishing for everyday wear.</p>
+            </div>
+
+            <div class="why-item">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                <h4>Honest Pricing</h4>
+                <p>Thoughtfully priced essentials without unnecessary markups.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+  <!-- ================= NEWSLETTER ================= -->
+  <section class="newsletter">
+    <div class="container-neeza">
+      <h2>Stay In The Loop</h2>
+      <p>New arrivals and offers, straight to your inbox.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="newsletter-note"></p>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer-neeza">
+    <div class="container-neeza">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="navbar-logo">NEEZA</div>
+          <p>Clean, modern menswear essentials — designed for everyday wear.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="tshirts.html">T-Shirts</a></li>
+            <li><a href="shirts.html">Shirts</a></li>
+            <li><a href="trousers.html">Trousers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Size Guide</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>About</h4>
+          <ul>
+            <li><a href="about.html">About NEEZA</a></li>
+            <li><a href="about.html">Our Story</a></li>
+          </ul>
+       <div class="footer-social">
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/neezaclothing.pk/"
+     class="social-instagram"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <!-- WhatsApp Community -->
+  <a href="https://chat.whatsapp.com/DfOxtuTMY1xGCAgwAuJ3Jc"
+     class="social-whatsapp"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="WhatsApp Community">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- TikTok -->
+  <a href="#"
+     class="social-tiktok"
+     aria-label="TikTok">
+    <i class="fa-brands fa-tiktok"></i>
+  </a>
+
+</div>
+
+      <div class="footer-bottom">
+        &copy; 2026 NEEZA. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (for future components only if needed) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+
+  <!-- NEEZA scripts -->
+  <script src="products.js"></script>
+  <script src="main.js"></script>
+  <script src="shop.js"></script>
+</body>
+</html>
